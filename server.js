@@ -4,10 +4,6 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
 
-// Note and Article
-var Note = require("./mo");
-var Article = require("./mo");
-
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
