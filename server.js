@@ -12,6 +12,7 @@ var Article = require("./models/Article.js");
 // Our scraping tools
 var axios = require("axios");
 var cheerio = require("cheerio");
+var request = require("request");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -82,7 +83,7 @@ app.get("/saved", function(req, res) {
   });
 });
 
-// A GET request to scrape the echojs website
+// A GET request to scrape the nytimes website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
   request("https://www.nytimes.com/", function(error, response, html) {
